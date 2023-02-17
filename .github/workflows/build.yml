@@ -132,7 +132,7 @@ jobs:
       id: checkReleaseVersion
       uses: actions/github-script@v3.1.0
       with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
+        github-token: ${{secrets.RELEASE_TOKEN}}
         script: |
           try {
             const releaseVersion = '${{ needs.check_version.outputs.FRIDA_VERSION }}'
